@@ -1,0 +1,57 @@
+<!--aanmeld form-->
+<div class="column width-6">
+    <h2 class="pb-2 center kleine-phone">
+        Aanmelden voor {{page.title}}
+    </h2>
+    <div class="contact-form-container">
+
+        <form name="aanmeld formulier( {{page.title}} )" class="bng-contact-form" method="POST"  netlify>
+
+            <div class="row">
+                <div class="column width-12">
+                    <label>
+                        <input type="text" name="name/lastname" class="form-fname form-element medium rounded" placeholder="voornaam & achternaam" tabindex="1" required="">
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column width-12">
+                    <label>
+                        <input type="email" name="email" class="form-email form-element medium rounded" placeholder="e-mail" tabindex="2" required="">
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column width-12">
+                    <label>
+                        <input type="tel" name="nummer" class="form-tel form-element medium rounded" placeholder="telefoon nummer" tabindex="3" required="">
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column width-12">
+                    <label>
+                        <input type="hidden" name="workshop" value="{{page.title}}">
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="column width-12">
+                    <label>
+                        (min.1 max.20)<input type="number" name="hoeveelheid" min="1" max="20" class="form-number form-element medium rounded" placeholder="Aantal personen" tabindex="4" required="">
+                    </label>
+                    <div class="clear"></div>
+                    <button type="submit" class="form-submit small button rounded bkg-yellow bkg-hover-navy color-purple u-bold u-uppercase color-hover-white pull-right" >aanmelding versturen</button>
+                <a href="#slide-1">terug</a>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+<!--aanmeld form end-->

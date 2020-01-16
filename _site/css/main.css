@@ -1,0 +1,519 @@
+/*=================================================================== 
+	IMPORT BASE SCSS 
+===================================================================*/
+@font-face {
+  font-family: 'Moon Bold';
+  src: url("../../fonts/Moon Bold.otf") format("opentype"); }
+@font-face {
+  font-family: 'Brandon';
+  src: url("../../fonts/Brandon_bld.otf") format("opentype"); }
+@font-face {
+  font-family: 'Futura Bold';
+  src: url("../../fonts/Futura Condensed Bold.otf") format("opentype"); }
+@font-face {
+  font-family: 'Futura Regular';
+  src: url("../../fonts/Futura Light Regular.otf") format("opentype"); }
+/*=================================================================== 
+	FONTS
+===================================================================*/
+/*=================================================================== 
+	COLORS
+===================================================================*/
+/*=================================================================== 
+	BACKGROUNDS 
+===================================================================*/
+/*
+$common-intro-bg: url("../images/bloei/bloei-web-2.jpg") no-repeat center 35%;
+{{ site.img}}*/
+/*=================================================================== 
+	LISTS
+===================================================================*/
+/*===================================================================
+	FONTS 
+===================================================================*/
+button,
+a.button, .u-bold, .contact-block .team-content .team-content-info h5, .overzicht-block .workshop-content h3, .overzicht-block .workshop-content button, .overzicht-block .workshop-content a.button {
+  font-weight: bold; }
+
+/*===================================================================
+	TEXT
+===================================================================*/
+.overzicht-block .workshop-content {
+  text-align: left; }
+
+.u-justify {
+  text-align: justify; }
+
+button,
+a.button, .u-uppercase, footer.common-footer button .footer-button, footer.common-footer nav.navigation ul li a:not(.button), footer.common-footer .bericht-form button, footer.common-footer button, .overzicht-block .workshop-content button, .overzicht-block .workshop-content a.button {
+  text-transform: uppercase; }
+
+.u-lowercase {
+  text-transform: lowercase; }
+
+.overzicht-block .search-input {
+  text-transform: capitalize; }
+
+/*===================================================================
+	POSITIONING
+===================================================================*/
+.intro-title-2 {
+  position: relative; }
+
+.intro-title-2::before {
+  position: absolute; }
+
+/*=================================================================== 
+	PADDING & MARGIN
+===================================================================*/
+/*=================================================================== 
+	FLEXBOX
+===================================================================*/
+footer.common-footer .footer-top span, footer.common-footer .bericht-form button, .overzicht-block .workshop-content button, .overzicht-block .workshop-content a.button {
+  display: block; }
+
+/*=================================================================== 
+	USEFUL MIXINS
+===================================================================*/
+/*=================================================================== 
+	LAYOUT
+===================================================================*/
+.header-transparent .header-inner > .nav-bar {
+  border-bottom: none; }
+
+.header .header-inner .navigation ul li.current > a, .header-micro-invite .header-inner .navigation ul li.current > a, .header .header-inner .navigation ul li.current > a:hover, .header-micro-invite .header-inner .navigation ul li.current > a:hover, .header.header-compact .header-inner .navigation ul li.current > a, .header-micro-invite.header-compact .header-inner .navigation ul li.current > a {
+  color: #F1C55C; }
+
+.header .header-inner .navigation ul li a, .header-micro-invite .header-inner .navigation ul li a {
+  color: #ffffff;
+  font-family: "Moon Bold";
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+.header .header-inner .navigation.secondary-navigation ul li a, .header-micro-invite .header-inner .navigation.secondary-navigation ul li a {
+  color: #393939;
+  text-shadow: none; }
+.header.header-compact .header-inner .navigation ul li a, .header-micro-invite.header-compact .header-inner .navigation ul li a {
+  color: #393939;
+  text-shadow: none; }
+
+.header-micro-invite .header-inner .navigation ul li a {
+  color: #393939;
+  text-shadow: none; }
+
+/*=================================================================== 
+	INTRO
+===================================================================*/
+.intro-title-2 {
+  background-color: #1f0032; }
+  .intro-title-2::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: $common-intro-bg;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+
+body {
+  font-family: "Futura Regular";
+  font-weight: 300; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Brandon";
+  color: #651882;
+  /*text-transform: capitalize;*/ }
+
+h1.on-banner,
+h2.on-banner {
+  font-family: "Brandon";
+  color: #F1C55C;
+  text-transform: capitalize; }
+
+h1.on-banner-h1,
+h2.on-banner-h2 {
+  color: #F1C55C;
+  text-transform: capitalize; }
+
+button,
+a.button {
+  color: #651882;
+  background-color: #F1C55C; }
+
+.font-size-1-7-rem {
+  font-size: 1.7rem; }
+
+.full-width {
+  width: 100% !important; }
+
+footer.common-footer {
+  position: relative;
+  background-color: #651882; }
+  footer.common-footer::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bloei/bloei-footer.jpg") no-repeat center bottom;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.8;
+    filter: alpha(opacity=80); }
+  footer.common-footer.overzicht-footer-bg::before {
+    background: url("../images/bloei/bloei-footer-overzicht.jpg") no-repeat center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+  footer.common-footer .footer-top span {
+    color: #ffffff;
+    padding-bottom: 30px; }
+  footer.common-footer nav {
+    background-color: rgba(105, 63, 106, 0.8); }
+    footer.common-footer nav.navigation ul li a:not(.button) {
+      font-family: "Moon Bold";
+      color: #ffffff;
+      font-size: 1.3rem;
+      font-weight: 600; }
+  footer.common-footer .bericht-form button {
+    width: 100%; }
+  footer.common-footer .bericht-form input.placeholder, footer.common-footer .bericht-form textarea.placeholder {
+    color: #aaa; }
+  footer.common-footer .bericht-form input::placeholder, footer.common-footer .bericht-form textarea::placeholder {
+    color: #aaa; }
+  footer.common-footer .bericht-form input::-moz-placeholder, footer.common-footer .bericht-form textarea::-moz-placeholder {
+    color: #aaa; }
+  footer.common-footer .bericht-form input:-ms-input-placeholder, footer.common-footer .bericht-form textarea:-ms-input-placeholder {
+    color: #aaa; }
+  footer.common-footer .bericht-form input::-ms-input-placeholder, footer.common-footer .bericht-form textarea::-ms-input-placeholder {
+    color: #aaa; }
+  footer.common-footer .bericht-form input::-webkit-input-placeholder, footer.common-footer .bericht-form textarea::-webkit-input-placeholder {
+    color: #aaa; }
+
+footer.micro-invite-footer {
+  background-color: #ffffff !important; }
+  footer.micro-invite-footer .navigation ul li a {
+    font-family: "Moon Bold";
+    color: #393939;
+    font-size: 1.3rem; }
+    footer.micro-invite-footer .navigation ul li a:hover {
+      color: #999; }
+
+.side-navigation-wrapper {
+  z-index: 1000; }
+
+/*=================================================================== 
+	IMPORT SCSS PAGES
+===================================================================*/
+/*=================================================================== 
+	HOME PAGE
+===================================================================*/
+.home-block {
+  background: url("") repeat;
+  line-height: 3rem;
+  box-shadow: 0px -2px 10px #0000006e; }
+  .home-block .home-p {
+    text-align: justify;
+    display: block; }
+    .home-block .home-p.home-p-left {
+      padding-right: 2rem; }
+    .home-block .home-p.home-p-right {
+      padding-left: 2rem; }
+
+@media only screen and (max-width: 768px) {
+  section.tm-slider-parallax-container .tm-slider-container {
+    height: 100vh !important; }
+    section.tm-slider-parallax-container .tm-slider-container .tms-content-inner {
+      vertical-align: top; }
+      section.tm-slider-parallax-container .tm-slider-container .tms-content-inner h1 {
+        margin-top: 7rem; }
+      section.tm-slider-parallax-container .tm-slider-container .tms-content-inner p {
+        margin-top: 60%; }
+
+  .home-block .home-p.home-p-left {
+    padding-right: 0; }
+
+  .home-block .home-p.home-p-right {
+    padding-left: 0; }
+
+  .pull-left-when-screen-less-768 {
+    float: left !important; } }
+/*=================================================================== 
+	CONTACT PAGE
+===================================================================*/
+.contact-block .team-content {
+  background-color: #f3f2f2;
+  margin-top: 20px;
+  width: 100%; }
+  .contact-block .team-content .photo-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden; }
+    .contact-block .team-content .photo-container img {
+      object-position: top;
+      position: absolute;
+      height: 100%;
+      max-width: none !important;
+      width: none !important;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      object-fit: cover; }
+  .contact-block .team-content .team-content-info {
+    padding: 1.5rem; }
+    .contact-block .team-content .team-content-info h5 {
+      color: #651882; }
+    .contact-block .team-content .team-content-info p {
+      padding: 0;
+      margin: 0; }
+    .contact-block .team-content .team-content-info .description {
+      padding-top: 6px;
+      border-top: 1px solid #666;
+      margin-top: 6px;
+      text-align: justify; }
+  .contact-block .team-content p {
+    line-height: 1.8rem;
+    font-size: 1.2rem;
+    font-weight: 600; }
+
+.bng-contact-form input[type="text"], .bng-contact-form input[type="email"], .bng-contact-form input[type="tel"], .bng-contact-form input[type="number"], .bng-contact-form textarea {
+  background-color: #f3f2f2; }
+  .bng-contact-form input[type="text"].placeholder, .bng-contact-form input[type="email"].placeholder, .bng-contact-form input[type="tel"].placeholder, .bng-contact-form input[type="number"].placeholder, .bng-contact-form textarea.placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .bng-contact-form input[type="text"]::placeholder, .bng-contact-form input[type="email"]::placeholder, .bng-contact-form input[type="tel"]::placeholder, .bng-contact-form input[type="number"]::placeholder, .bng-contact-form textarea::placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .bng-contact-form input[type="text"]::-moz-placeholder, .bng-contact-form input[type="email"]::-moz-placeholder, .bng-contact-form input[type="tel"]::-moz-placeholder, .bng-contact-form input[type="number"]::-moz-placeholder, .bng-contact-form textarea::-moz-placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .bng-contact-form input[type="text"]:-ms-input-placeholder, .bng-contact-form input[type="email"]:-ms-input-placeholder, .bng-contact-form input[type="tel"]:-ms-input-placeholder, .bng-contact-form input[type="number"]:-ms-input-placeholder, .bng-contact-form textarea:-ms-input-placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .bng-contact-form input[type="text"]::-ms-input-placeholder, .bng-contact-form input[type="email"]::-ms-input-placeholder, .bng-contact-form input[type="tel"]::-ms-input-placeholder, .bng-contact-form input[type="number"]::-ms-input-placeholder, .bng-contact-form textarea::-ms-input-placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+  .bng-contact-form input[type="text"]::-webkit-input-placeholder, .bng-contact-form input[type="email"]::-webkit-input-placeholder, .bng-contact-form input[type="tel"]::-webkit-input-placeholder, .bng-contact-form input[type="number"]::-webkit-input-placeholder, .bng-contact-form textarea::-webkit-input-placeholder {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+  .contact-block .team-content .photo-container {
+    height: 90px; }
+    .contact-block .team-content .photo-container img {
+      width: 100%;
+      height: auto; } }
+@media only screen and (max-width: 768px) {
+  .contact-block .team-content .photo-container {
+    height: auto; }
+    .contact-block .team-content .photo-container img {
+      position: relative;
+      width: 100%; } }
+@media only screen and (max-width: 768px) {
+  .bng-contact-form input[type="submit"] {
+    width: 100%; } }
+/*=================================================================== 
+	OVERZICHT PAGE
+===================================================================*/
+ul {
+  list-style: none; }
+
+.overzicht-block .search-input {
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-size: 0.9rem;
+  border-color: rgba(154, 76, 202, 0.5);
+  background-color: #f3f2f2; }
+  .overzicht-block .search-input.placeholder {
+    color: #651882; }
+  .overzicht-block .search-input::placeholder {
+    color: #651882; }
+  .overzicht-block .search-input::-moz-placeholder {
+    color: #651882; }
+  .overzicht-block .search-input:-ms-input-placeholder {
+    color: #651882; }
+  .overzicht-block .search-input::-ms-input-placeholder {
+    color: #651882; }
+  .overzicht-block .search-input::-webkit-input-placeholder {
+    color: #651882; }
+.overzicht-block .workshop-content {
+  background-color: rgba(235, 172, 183, 0.12);
+  padding: 2rem;
+  border-radius: 4px;
+  margin-top: 30px;
+  width: 100%; }
+  .overzicht-block .workshop-content h3 {
+    font-size: 2.1rem;
+    padding: 0;
+    margin: 0;
+    min-height: 50px;
+    display: block; }
+  .overzicht-block .workshop-content button, .overzicht-block .workshop-content a.button {
+    text-align: center;
+    width: 100% !important;
+    margin: 0; }
+  .overzicht-block .workshop-content .workshop-content-info p {
+    line-height: 2rem;
+    min-height: 60px; }
+  .overzicht-block .workshop-content .workshop-content-info .row .column ul {
+    padding: 0;
+    margin: 0;
+    line-height: 40px; }
+    .overzicht-block .workshop-content .workshop-content-info .row .column ul li {
+      display: inline-block;
+      vertical-align: middle; }
+      .overzicht-block .workshop-content .workshop-content-info .row .column ul li span {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0; }
+      .overzicht-block .workshop-content .workshop-content-info .row .column ul li:nth-child(3) {
+        margin-left: 1.6rem; }
+
+/*=================================================================== 
+	MICROINVITES PAGE
+===================================================================*/
+.micro-invite-block {
+  height: calc(100vh - 80px - 50px) !important;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden; }
+  .micro-invite-block .left-content {
+    position: relative;
+    background: #333;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    overflow: hidden; }
+    .micro-invite-block .left-content .section-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #8752a0;
+      z-index: -1; }
+      .micro-invite-block .left-content .section-layer.section-layer-animate {
+        animation-name: example;
+        animation-duration: 2s; }
+      .micro-invite-block .left-content .section-layer img {
+        position: absolute;
+        max-width: none !important;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 100%;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        object-fit: cover;
+        width: 100%;
+        object-position: center; }
+      .micro-invite-block .left-content .section-layer .description {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; }
+        .micro-invite-block .left-content .section-layer .description h2 {
+          color: #F1C55C;
+          padding: 0;
+          margin: 0; }
+        .micro-invite-block .left-content .section-layer .description p {
+          padding: 0;
+          margin: 0 0 10px 0;
+          color: #ffffff; }
+  .micro-invite-block .right-content {
+    width: 50%;
+    overflow: scroll;
+    padding: 1rem 5rem;
+    background-color: #f9f9f9; }
+    .micro-invite-block .right-content .inner-right-content span {
+      font-size: 1.2rem;
+      font-weight: 900; }
+    .micro-invite-block .right-content .inner-right-content ul {
+      line-height: 30px; }
+      .micro-invite-block .right-content .inner-right-content ul, .micro-invite-block .right-content .inner-right-content ul li, .micro-invite-block .right-content .inner-right-content ul li span {
+        margin: 0;
+        padding: 0; }
+      .micro-invite-block .right-content .inner-right-content ul li {
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: middle; }
+        .micro-invite-block .right-content .inner-right-content ul li:nth-child(3) {
+          margin-left: 2rem; }
+    .micro-invite-block .right-content .inner-right-content h2 {
+      font-size: 2.2rem;
+      padding: 25px 0; }
+    .micro-invite-block .right-content .inner-right-content p {
+      font-size: 2rem;
+      text-align: justify; }
+      .micro-invite-block .right-content .inner-right-content p.u-bold {
+        color: #333; }
+
+@keyframes example {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@media only screen and (max-width: 768px) {
+  .micro-invite-block {
+    flex-direction: column; }
+    .micro-invite-block .left-content {
+      width: 100%;
+      height: 30%; }
+    .micro-invite-block .right-content {
+      width: 100%;
+      height: 70%; } }
+/*
+@media screen and (max-width: 800px) {
+    .micro-invite-block .image-container {
+        position: fixed;
+        background: #333;
+        z-index: 999;
+        width: 100%;
+        height: 20%;
+        overflow: hidden;
+    }
+
+    .micro-invite-block .content-container {
+        height: auto;
+        // overflow-y: scroll;
+        margin-top: 20vh;
+    }
+
+    .micro-invite-block .image-container img {
+        position: absolute;
+        max-width: none !important;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+    }
+}*/
+a.highlight:after {
+  content: "";
+  background-image: url(/images/bloei/highlight.png);
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+
+/*# sourceMappingURL=main.css.map */

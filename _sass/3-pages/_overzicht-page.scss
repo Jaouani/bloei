@@ -1,0 +1,70 @@
+/*=================================================================== 
+	OVERZICHT PAGE
+===================================================================*/
+ul {
+    list-style: none;
+}
+.overzicht-block{
+    .search-input{
+        border-radius: 20px;
+        padding: 5px 20px;
+        @extend %u-capitalize;
+        font-size: 0.9rem;
+        border-color: $search-border-color;
+        background-color: $search-bg;
+        @include placeholder{
+            color: $purple;
+        }
+    }
+    .workshop-content{
+        background-color:rgba(235, 172, 183, 0.12);
+        padding: 2rem;
+        border-radius: 4px;
+        @extend %u-text-align-left;
+        margin-top: 30px;
+        width: 100%;
+        h3{
+            font-size: 2.1rem;
+            @extend %u-bold;
+            padding: 0;
+            margin: 0;
+            min-height: 50px;
+            display: block;
+        }
+        button, a.button{
+            text-align: center;
+            width: 100% !important;
+            margin: 0;
+            @extend %u-display-block;
+            @extend %u-uppercase;
+            @extend %u-bold;
+        }
+        .workshop-content-info{
+            p{
+                line-height: 2rem;
+                min-height: 60px;
+            }
+            .row{
+                .column{
+                    ul{
+                        padding: 0;
+                        margin: 0;
+                        line-height: 40px;
+                        li{
+                            display: inline-block;
+                            vertical-align: middle;
+                            span{
+                                font-size: 1rem;
+                                font-weight: bold;
+                                margin: 0;
+                            }
+                            &:nth-child(3){
+                                margin-left: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

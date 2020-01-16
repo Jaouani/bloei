@@ -1,0 +1,30 @@
+<!-- Fullscreen Slider Section -->
+<section class="section-block featured-media tm-slider-parallax-container window-height" style="height: 100vh;">
+    <div class="tm-slider-container full-width-slider" data-featured-slider data-parallax data-scale-under="960">
+        <ul class="tms-slides">
+            <li class="tms-slide" data-image data-as-bkg-image data-force-fit data-overlay-bkg-color="#651882" data-overlay-bkg-opacity="0.3">
+                <div class="tms-content">
+                    <div class="tms-content-inner center v-align-middle">
+                        <div class="row">
+                            <div class="column width-12">
+                                <h1 class="tms-caption color-yellow slider-section-title mb-2"
+                                    data-animate-in="preset:slideInUpShort;duration:900ms;delay:100ms;"
+                                    data-no-scale
+                                    >{{page.slider-section-title}}</h1>
+                                <div class="clear"></div>
+                                {% if page.slider-section-sub-title != false %}
+                                <p class="tms-caption lead color-grey-ultralight"
+                                    data-animate-in="preset:slideInUpShort;duration:900ms;delay:200ms;"
+                                    data-no-scale
+                                    >{{page.slider-section-sub-title}}</p>
+                                {% endif %}
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img data-src='{{"images/bloei/bloei-cover.jpg" | relative_url}}' src="{{'images/template/blank.png' | relative_url}}" alt=""/>
+            </li>
+        </ul>
+    </div>
+</section>

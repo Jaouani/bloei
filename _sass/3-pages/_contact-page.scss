@@ -1,0 +1,98 @@
+/*=================================================================== 
+	CONTACT PAGE
+===================================================================*/
+
+.contact-block{
+    .team-content{
+        background-color: $team-content-bg;
+        margin-top: 20px;
+        width: 100%;
+        .photo-container{
+            position: relative;
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            img{
+                object-position: top;
+                position: absolute;
+                height: 100%;
+                max-width: none !important;
+                width: none !important;
+                left: 50%; transform: translate(-50%,0);
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .team-content-info{
+            padding: 1.5rem;
+            h5{
+                color: $purple;
+                @extend %u-bold; 
+            }
+            p{
+                padding: 0;
+                margin: 0;
+
+            }
+            .description{
+                padding-top: 6px;
+                border-top: 1px solid #666;
+                margin-top: 6px;
+                text-align: justify;
+            }
+        }
+        p{
+            line-height: 1.8rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
+}
+
+.bng-contact-form{
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea{
+        background-color: rgb(243, 242, 242);
+        @include placeholder{
+            color: #aaa;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 960px) {
+    .contact-block{
+        .team-content{
+            .photo-container{
+                height: 90px;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-block{
+        .team-content{
+            .photo-container{
+                height: auto;
+                img{
+                    position: relative;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .bng-contact-form{
+        input[type="submit"]{
+            width: 100%;
+        }
+    }
+}
+

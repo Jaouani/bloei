@@ -1,0 +1,47 @@
+/*=================================================================== 
+	FONTS
+===================================================================*/
+$body-text-font: 'Futura Regular';
+$nav-links-font: 'Moon Bold';
+$logo-h1-h2-font: 'Brandon';
+
+/*=================================================================== 
+	COLORS
+===================================================================*/
+$purple: #651882;
+$button-text-color: $purple;
+$h1-h2-color: $purple;
+
+$yellow: #F1C55C;
+$links-hover-color: $yellow;
+$body-text-header-color: $yellow;
+$h1-h2-text-banner-color: $yellow;
+
+$gray: #393939;
+$body-text-color: $gray;
+$nav-link-color-if-bg-white: $gray;
+
+$white: #ffffff;
+$background-color: $white;
+$banner-body-text-color: $white;
+$link-on-nav-color: $white;
+
+$search-border-color: rgba(154, 76, 202, 0.5);
+
+/*=================================================================== 
+	BACKGROUNDS 
+===================================================================*/
+$footet-nav-bg: rgba(105,63,106, .8);
+$search-bg: #f3f2f2;
+$team-content-bg: #f3f2f2;
+$footer-img-bg: url("../images/bloei/bloei-footer.jpg") no-repeat center bottom;
+$home-block-img-bg: url("../images/bloei/a341c65ff0d16176227973b85d47c09e736ddb12.png") repeat;
+$home-block-img-bg: url("") repeat;
+$overzicht-footer-bg: url("../images/bloei/bloei-footer-overzicht.jpg") no-repeat center top;
+/*
+$common-intro-bg: url("../images/bloei/bloei-web-2.jpg") no-repeat center 35%;
+{{ site.img}}*/
+/*=================================================================== 
+	LISTS
+===================================================================*/
+$directions: top, right, bottom, left;

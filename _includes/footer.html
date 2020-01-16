@@ -1,0 +1,40 @@
+<!-- Footer -->
+<footer class="{{page.footer-bg-class}} common-footer">
+    <div class="footer-top section-block center bkg-transparent">
+        {% if include.f-top == "index" %}
+            <div class="row">
+                <span class="u-bold font-size-1-7-rem">Bekijk nu ons <br> aanbod</span>
+            </div>
+            <div class="row">
+                <a class="form-submit small button rounded bkg-yellow bkg-hover-navy color-purple u-bold u-uppercase color-hover-white" href="/aanbod/">trainingen</a>
+            </div>
+        {% endif %}
+        {% if include.f-top == "aanbod" %}
+            <div class="row">
+                <div class="column width-4 offset-4">
+                    <p class="color-white font-size-1-7-rem">
+                            Heb jij een onderwerp waar je een training over zou willen? Stuur ons een bericht!
+                    </p>
+                    <form name="aanbod" class="bericht-form pt-30" action="" netlify>
+                        <input class="form-element rounded" type="text" placeholder="Naam">
+                        <input class="form-element rounded" type="email" placeholder="Email">
+                        <textarea class="form-element rounded" rows="6" placeholder="Bericht"></textarea>
+                        <button type="submit" class="rounded bkg-yellow">verzenden</button>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <div class="section-block pt-0 pb-0 bkg-transparent">
+        <nav class="navigation nav-center">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/visie-missie/">Visie/Missie</a></li>
+                <li><a href="/aanbod/">Aanbod</a></li>
+                <li><a href="/bloei!/">Bloei!</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+<!-- Footer End -->

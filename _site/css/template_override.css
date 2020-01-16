@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'Moon Bold';
+    src: url('../fonts/Moon\ Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon';
+    src: url('../fonts/Brandon_bld.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+button{
+    font-weight: 900;
+    color: purple;
+    padding: 5px 30px;
+}
+
+.header-transparent .header-inner > .nav-bar{
+    border-bottom: none;
+}
+
+.logo .logo-inner a h1{
+    color: white;
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 200%;
+    font-family: 'Brandon';
+}
+
+.logo .logo-inner a:first-child h1{
+    color: orange;
+    line-height: 150%;
+}
+
+/* nav */
+.header .header-inner .navigation>ul>li>a{
+    color: white;
+    font-family: 'Moon Bold';
+}
+
+.header.header-compact .header-inner .navigation>ul>li>a{
+    color: black;
+}
+
+.header .navigation > ul > li.current > a, 
+.header.header-compact .navigation > ul > li.current > a, 
+.header .navigation > ul > li.current > a:hover{
+    color: orange;
+}
+/* end nav */
+
+h3{
+    color: purple;
+    font-weight: 700;
+}
+
+.slider-section-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+
+/* footer */
+footer{
+    position: relative;
+}
+
+footer::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/template/hero-1.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+footer .footer-top span{
+    color: #ffffff;
+    padding-bottom: 30px;
+    display: block;
+}
+
+footer button.footer-button{
+    text-transform: uppercase;
+
+}
+
+footer nav{
+    background-color: rgba(50, 0, 100, 0.7);
+}
+
+footer .navigation ul li>a:not(.button){
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+footer .bericht-form button{
+    text-transform: uppercase;
+    width: 100%;
+    display: block;
+}
+
+footer .bericht-form input::-webkit-input-placeholder,
+footer .bericht-form textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ccc;
+}
+footer .bericht-form input::-moz-placeholder,
+footer .bericht-form textarea::-moz-placeholder { /* Firefox 19+ */
+    color: ccc;
+}
+footer .bericht-form input:-ms-input-placeholder,
+footer .bericht-form textarea:-ms-input-placeholder { /* IE 10+ */
+    color: ccc;
+}
+footer .bericht-form input:-moz-placeholder,
+footer .bericht-form textarea:-moz-placeholder { /* Firefox 18- */
+    color: ccc;
+}
+/* end footer */
+
+
+
+
+
+
+
+/* OVERZICHT */
+.overzicht-block .search-input{
+    border-radius: 20px;
+    padding: 5px 20px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    border-color:rgba(154, 76, 202, 0.5);
+    background-color: #f3f2f2;
+}
+
+.overzicht-block .search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: purple;
+  }
+  .overzicht-block .search-input::-moz-placeholder { /* Firefox 19+ */
+    color: purple;
+  }
+  .overzicht-block .search-input:-ms-input-placeholder { /* IE 10+ */
+    color: purple;
+  }
+  .overzicht-block .search-input:-moz-placeholder { /* Firefox 18- */
+    color: purple;
+  }
+
+.overzicht-block .workshop-content{
+    background-color:rgba(235, 172, 183, 0.12);
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.overzicht-block .workshop-content h5{
+    color: purple;
+    font-weight: bold;
+}
+
+.overzicht-block .workshop-content button{
+    width: 100%;
+    margin: 0;
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* end OVERZICHT */
+
+
+
+/* contact */
+.contact-block .team-content{
+    background-color: #f3f2f2;
+    margin-top: 20px;
+}
+
+.contact-block .team-content .team-content-info{
+    padding: 1.5rem;
+}
+
+.contact-block .team-content .team-content-info h5{
+    color: purple;
+    font-weight: bold;
+}
+
+.contact-block .team-content .team-content-info p{
+    padding: 0;
+    margin: 0;
+}
+/* end contact */
+
+
+.intro-title-2{
+    background-image: url(../images/template/hero-screens.jpg);
+}

@@ -1,0 +1,68 @@
+%links-hover-color{
+    color: $links-hover-color;
+}
+
+.header, .header-micro-invite{
+    .header-inner{
+        .navigation{
+            ul{
+                li{
+                    a{
+                        color: $link-on-nav-color;
+                        font-family: $nav-links-font;
+                        text-shadow: 0 0 10px rgba(0,0,0,.5);
+                    }
+                    &.current > a{
+                        @extend %links-hover-color;
+                        &:hover{
+                            @extend %links-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+        .navigation.secondary-navigation{
+            ul{
+                li{
+                    a{
+                        color: $nav-link-color-if-bg-white;
+                        text-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.header-compact{
+        .header-inner{
+            .navigation{
+                ul{
+                    li{
+                        a{
+                            color:$nav-link-color-if-bg-white;
+                            text-shadow:none;
+                        }
+                        &.current > a{
+                            @extend %links-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-micro-invite{
+    .header-inner{
+        .navigation{
+            ul{
+                li{
+                    a{
+                        color: $nav-link-color-if-bg-white;
+                        text-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+}

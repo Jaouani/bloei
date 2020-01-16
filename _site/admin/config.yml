@@ -1,0 +1,69 @@
+backend:
+  name: git-gateway
+  repo: brandnewguys/bloei
+  branch: master  # Branch to update (optional; defaults to master)
+  api_root: https://api.bitbucket.org/2.0
+  #site_domain: location.hostname
+  #base_url: https://bloei.com # Path to ext auth provider
+#workflow
+publish_mode: editorial_workflow
+#media
+media_folder: "images/bloei" # Media files will be stored in the repo under images/uploads
+#content
+collections:
+  - name: "workshop" # Used in routes, e.g., /admin/collections/blog
+    label: "Workshop" # Used in the UI
+    folder: "_workshop" # The path to the folder where the documents are stored, this might need a subfolder
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout",                            name: "layout",         widget: "hidden", default: "workshop"}
+      - {label: "Title",                             name: "title",          widget: "string"}
+      - {label: "Begin Datum |week dag maand jaar|", name: "begin",          widget: "date", default: "" , format: "D MMM YY"}
+      - {label: "Eind Datum |week dag maand jaar|",  name: "eind",           widget: "date", default: "" , format: "D MMM YY"}
+      - {label: "Locatie",                           name: "locatie",        widget: "string"}
+      - {label: "Kosten |€  (Kosten)|",              name: "prijs",          widget: "number"}
+      - {label: "Tijd | (Tijd) minuten|",            name: "time",           widget: "number"}
+      - {label: "Deelnemers |Max. (Deelnemers) pp|", name: "deelnemers",     widget: "number"}
+      - {label: "beschrijving (description)",        name: "description",    widget: "text"}
+      -  label: "sections"
+         name: "sections"
+         widget: "list"
+         fields:
+            - {label: "titel (section)",          name: "section",   widget: "string"}
+            - {label: "beschrijving (subtitle)",  name: "subtitle",  widget: "text"}
+            #- {label: "afbeelding (img)",         name: "img",       widget: "image"}
+      - {label: "Body",                              name: "body",           widget: "markdown"}
+
+  - name: "pages" 
+    label: "Pages"
+    folder: "_pages" 
+    create: true 
+    slug: "{{slug}}" 
+    fields: 
+      - {label: "Layout",            name: "layout",                  widget: "hidden", default: "index"}
+      - {label: "pagina naam",       name: "title",                   widget: "string"}
+      - {label: "intro title",       name: "intro-section-title",     widget: "text"}
+      - {label: "intro sub title",   name: "intro-section-sub-title", widget: "text",   required: false}
+      - {label: "achtergrond foto",  name: "background-img",          widget: "image"}
+      - {label: "visie-missie-link", name: "visie-missie-link",       widget: "hidden", default: "current"}
+      - {label: "",                  name: "permalink",               widget: "string"}
+      - {label: "footer-top",        name: "footer-top",              widget: "hidden", default: "index" }
+      - {label: "foot plaatsing",    name: "percentage",              widget: "number", default: "35%" }
+      - {label: "Body",              name: "body",                    widget: "markdown"}
+
+  - name: "trainers" 
+    label: "Trainers"
+    folder: "_trainers" 
+    create: true 
+    slug: "{{slug}}" 
+    fields: 
+      - {label: "Voornaam/Achternaam", name: "title", widget: "string"}
+      - {label: "email", name: "email", widget: "string"}
+      - {label: "functie", name: "type", widget: "string"}
+      - {label: "zelfportret", name: "photo", widget: "image"}
+      - {label: "voorstellen", name: "body", widget: "markdown"}
+
+
+
+  

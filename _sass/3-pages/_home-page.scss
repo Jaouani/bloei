@@ -1,0 +1,48 @@
+/*=================================================================== 
+	HOME PAGE
+===================================================================*/
+
+.home-block{
+	background: $home-block-img-bg;
+	line-height: 3rem;
+	box-shadow: 0px -2px 10px #0000006e;
+	.home-p{
+		text-align: justify;
+		display: block;
+		&.home-p-left{
+			padding-right: 2rem;
+		}
+		&.home-p-right{
+			padding-left: 2rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	section.tm-slider-parallax-container{
+		.tm-slider-container{
+			height: 100vh !important;
+			.tms-content-inner{
+				vertical-align: top;
+				h1{
+					margin-top: 7rem;
+				}
+				p{
+					margin-top: 60%;
+				}
+			}
+		}
+	}
+
+    .home-block .home-p.home-p-left{
+		padding-right: 0;
+	}
+	.home-block .home-p.home-p-right{
+		padding-left: 0;
+	}
+	.pull-left-when-screen-less-768{
+		float: left !important;
+	}
+
+
+}

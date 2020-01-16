@@ -1,0 +1,55 @@
+body{
+    font-family: $body-text-font;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $logo-h1-h2-font;
+    color: $h1-h2-color;
+    /*text-transform: capitalize;*/
+}
+
+h1.on-banner, 
+h2.on-banner{
+    font-family: $logo-h1-h2-font;
+    color: $h1-h2-text-banner-color;
+    text-transform: capitalize;
+}
+
+h1.on-banner-h1, 
+h2.on-banner-h2{
+    color: $h1-h2-text-banner-color;
+    text-transform: capitalize;
+}
+
+button,
+a.button{
+    @extend %u-bold;
+    @extend %u-uppercase;
+    color: $purple;
+    background-color: $yellow;
+}
+
+.u-lowercase{
+    @extend %u-lowercase;
+}
+
+.u-uppercase{
+    @extend %u-uppercase;
+}
+
+.u-justify{
+    @extend %u-text-align-justify;
+}
+
+.u-bold{
+    @extend %u-bold;
+}
+
+.font-size-1-7-rem{
+    font-size: 1.7rem;
+}
+
+.full-width{
+    width: 100% !important;
+}

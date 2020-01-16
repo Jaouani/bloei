@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    {% include side_navigation_menu.html %}
+    <div class="wrapper">
+        <div class="wrapper-inner">
+
+            {% include header.html %}
+
+            <!-- Content -->
+            <div class="content clearfix">  
+                {{ content }}
+            </div>
+            <!-- End Content -->
+        </div>
+    </div>
+    {% include footer.html f-top=page.footer-top %}
+    
+    <!-- Js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+    <script src='{{"js/template/timber.master.min.js" | relative_url }}'></script>
+    <script>
+        $('document').ready(function(){
+           var options = {
+    valueNames: [ 'workshop-title' ]
+    };
+    var workshopList = new List('workshop-list', options);
+    jQuery('#filter').on('keyup', function() {
+        var searchString = jQuery(this).val();
+        workshopList.search(searchString);
+    }); 
+        });
+         
+     </script>
+    <!-- End Js -->
+</body>
+</html>

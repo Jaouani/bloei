@@ -1,0 +1,26 @@
+<!-- Intro Title Section 2 -->
+<style>
+    .intro-title-2::before{
+        background: url("{{ page.background-img}}") no-repeat center {{page.percentage}};
+        background-size: cover;
+    }
+</style>
+<div class="section-block intro-title-2 bkg-transparente" >
+    <div class="row">
+        <div class="column width-12">
+            <div class="title-container">
+                <div class="title-container-inner center">
+                    <h1 class="inline no-margin-bottom horizon on-banner">
+                        {{page.intro-section-title}}
+                    </h1>
+                    {% if page.intro-section-sub-title != false %}
+                    <p class="color-white">
+                        {{page.intro-section-sub-title}}
+                    </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Intro Title Section 2 End -->

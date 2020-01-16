@@ -1,0 +1,92 @@
+---
+layout: index
+title: Contact
+intro-section-title: Contact
+intro-section-sub-title: All Faith Needs Feet
+contact-link: current
+permalink: "/contact/"
+footer-top: "index"
+background-img: ../images/bloei/granenveld.jpg
+percentage: 35% 
+---
+<!--"../images/bloei/bloei-web-2.jpg"-->
+{% include intro.html %}
+
+<div class="contact-block section-block">
+    <div class="row">
+        <div class="column width-8 offset-2">
+            <h3 class="pb-2 center">
+                Contact
+            </h3>
+          
+            <div class="row flex boxes">
+                {% if site.trainers.size > 0 %}
+                    {% for trainer in site.trainers %}
+                        <div class="column width-4">
+                            <div class="team-content">
+                                <div class="photo-container">
+                                    <img src="{{ trainer.photo | relative_url  }}">
+                                </div>
+                                <div class="team-content-info">
+                                    <h5>{{trainer.title}}</h5>
+                                    <p>{{trainer.type}}</p>
+                                    <p><a href="mailto:info@bloei.nl">{{trainer.email}}</a></p>
+                                    <p class="description">{{ trainer.content}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    There is no trainer yet
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section-block contact-1 bkg-transparent pb-80 pt-0">
+    <div class="row">
+        <div class="column width-6 offset-3">
+            <h3 class="pb-2 center">
+                Stuur ons een bericht
+            </h3>
+            <div class="contact-form-container">
+
+                <form name="contact" class="bng-contact-form" method="POST"  netlify>
+                    
+                    <div class="row">
+                        <div class="column width-12">
+                            <label>
+                                <input type="text" name="name" class="form-fname form-element medium rounded" placeholder="naam" tabindex="1" required="">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column width-12">
+                            <label>
+                                <input type="email" name="email" class="form-email form-element medium rounded" placeholder="e-mail" tabindex="3" required="">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column width-12">
+                            <label>
+                                <textarea name="message" class="form-message form-element medium rounded" placeholder="bericht" tabindex="5" required=""></textarea>
+                            </label>
+                            <div class="clear"></div>
+                            <button type="submit" class="form-submit small button rounded bkg-yellow bkg-hover-navy color-purple u-bold u-uppercase color-hover-white pull-right">verzenden</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

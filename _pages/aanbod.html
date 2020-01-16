@@ -1,0 +1,76 @@
+---
+layout: index
+title: aanbod
+intro-section-title: <p>Wijsheid is de sleutel voor</p> <p>onderwijs & opvoeding</p>
+intro-section-sub-title: false
+aanbod-link: current
+permalink: "/aanbod/"
+footer-top: "aanbod"
+slider-height: 200
+footer-bg-class: aanbod-footer-bg
+background-img: ../images/bloei/granenveld.jpg 
+percentage: 30%
+---
+<!--../images/bloei/bloei-WB-section2.JPG-->
+
+{% include intro.html %}
+
+<div class="overzicht-block section-block">
+    <div class="row">
+        <div class="column width-8 offset-2">
+            <div class="section-block pt-0 pb-100">
+                <div class="row center">
+                    <h2 class="pb-2">
+                        Onderstaand vind u een overzicht van ons aanbod.
+                        <br>Ons aanbod wordt voortdurend uitgebreid
+                    </h2>
+                </div>
+
+                <div class="row">
+                    <div class="column width-4 pull-right">
+                        <input id="filter" class="search search-input form-element" type="email" placeholder="zoeken">
+                    </div>
+                </div>
+                <div id="workshop-list">
+                <div class="row flex boxes list">
+                    
+                    {% if site.workshop.size > 0 %}
+                        {% for workshop in site.workshop %}
+                            
+                                <div class="column width-6">
+                                    
+                                    <div class="workshop-content">
+                                        <div class="workshop-content-info">
+                                            <h3 class="workshop-title">{{workshop.title}}</h3>
+                                            <div class="row">
+                                                <div class="column">
+                                                    <ul>
+                                                        <li><span class="icon-clock small"></span></li>
+                                                        <li><span>{{workshop.time}} minuten</span></li>
+                                                        <li><span class="icon-users small"></span>  </li>
+                                                        <li><span>Max. {{workshop.deelnemers}} pp</span></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p>{{workshop.description | truncatewords: 20, "..."}}</p>
+                                            <a class="button" href="{{workshop.url}}">
+                                                Lees Meer <br>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        {% endfor %}
+                    {% else %}
+                        <div class="column width-12">
+                            <div class="box info dismissable">
+                                No workshops yet
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

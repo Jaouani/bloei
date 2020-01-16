@@ -1,0 +1,302 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+    {% include side_navigation_menu.html %}
+    <div class="wrapper">
+        <div class="wrapper-inner">
+
+            {% include header-workshop.html %}
+
+            <!-- Content -->
+            <div class="content clearfix slider-phone slides-phone">  
+                <div class="micro-invite-block section-block fullscreen-section slides-phone">
+
+                    <div class="slider slides">
+                        <!--section-->
+                            <div class="left-content slides" id="js-left-content">
+                                <!--<div class="section-layer">
+                                    <img class="js-micro-invite-img" src="https://www.socwall.com/images/wallpapers/34435-1920x1200.jpg" alt="">
+                                    <div class="description">
+                                        <h2 class="js-description-title" id="js-description-title">Something Nice</h2>
+                                        <p class="js-description-paragraph">
+                                            Another line of text
+                                        </p>
+                                        <button class="rounded js-enroll-btn">
+                                            Enroll now
+                                        </button>
+                                    </div>
+                                </div>-->
+                            </div>
+                        <!--section-->
+
+                        <!--slider desktop-->            
+                            <div class="row slides desktop" id="slide-desktop">                           
+                                {% include aanmeld-form.html %}
+                            </div>
+                        <!--slider desktop end-->
+                    </div>
+
+                    <div class="right-content" id="right-content">
+                        <div class="inner-right-content" id="inner-right-content">
+                            <span class="end-section" id="top"></span>
+                            <ul>
+                                <li><span class="icon-calendar small"></span>
+                                    <span>{% assign dy = page.begin | date: "%a" %}
+                                            {% case dy %}
+                                                {% when "Mon" %}Maandag
+                                                {% when "Tue" %}Dinsdag
+                                                {% when "Wed" %}Woensdag
+                                                {% when "Thu" %}Donderdag
+                                                {% when "Fri" %}Vrijdag
+                                                {% when "Sat" %}Zaterdag
+                                                {% when "Sun" %}Zondag
+                                            {% endcase %}
+                                        {% assign m = page.begin | date: "%-m" %}    
+                                        {{ page.begin | date: "%-d" }}
+                                            {% case m %}
+                                                {% when '1'  %}Januari
+                                                {% when '2'  %}Februari
+                                                {% when '3'  %}Maart
+                                                {% when '4'  %}April
+                                                {% when '5'  %}Mei
+                                                {% when '6'  %}Juni
+                                                {% when '7'  %}Juli
+                                                {% when '8'  %}Augustus
+                                                {% when '9'  %}September
+                                                {% when '10' %}Oktober
+                                                {% when '11' %}November
+                                                {% when '12' %}December
+                                            {% endcase %}
+                                        {{ page.begin | date: "%Y" }} 
+                                        t/m 
+                                        {% assign dy = page.eind | date: "%a" %}
+                                        {% case dy %}
+                                            {% when "Mon" %}Maandag
+                                            {% when "Tue" %}Dinsdag
+                                            {% when "Wed" %}Woensdag
+                                            {% when "Thu" %}Donderdag
+                                            {% when "Fri" %}Vrijdag
+                                            {% when "Sat" %}Zaterdag
+                                            {% when "Sun" %}Zondag
+                                        {% endcase %}
+                                    {% assign m = page.eind | date: "%-m" %}    
+                                    {{ page.eind | date: "%-d" }}
+                                        {% case m %}
+                                            {% when '1'  %}Januari
+                                            {% when '2'  %}Februari
+                                            {% when '3'  %}Maart
+                                            {% when '4'  %}April
+                                            {% when '5'  %}Mei
+                                            {% when '6'  %}Juni
+                                            {% when '7'  %}Juli
+                                            {% when '8'  %}Augustus
+                                            {% when '9'  %}September
+                                            {% when '10' %}Oktober
+                                            {% when '11' %}November
+                                            {% when '12' %}December
+                                        {% endcase %}
+                                    {{ page.eind | date: "%Y" }}</span></li>
+
+                                
+                                <li><span class="icon-compass small"></span><span> {{page.locatie}}</span></li>
+                            </ul>
+                            <ul>     
+                                <li><span class="icon-credit-card small"></span></li>
+                                <li><span>€ {{page.prijs}}</span></li>
+                               
+                                <li><span class="icon-clock small"></span></li>
+                                <li><span>{{page.time}} minuten</span></li>
+                            <li></li>
+                                <li><span class="icon-users small"></span>
+                                <span>Max. {{page.deelnemers}} pp</span></li>
+                            </ul>
+                            <h2>{{page.title}}</h2>
+                            <p class="u-bold" id="start-section">
+                                    {{ page.start-section}}
+                            </p>
+                            <p class="middle-section" id="middle-section">
+                            {{ content }}
+                            </p>
+                            
+                            <span class="end-section" id="bottom"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <!--slider phone-->  
+                <div class="micro-invite-block section-block fullscreen-section slides-phone phone" id="slide-phone">          
+                    <div class="row">                           
+                        {% include aanmeld-form.html %}
+                    </div>
+                </div>
+                <!--slider phone end-->
+            </div>
+            <!-- End Content -->
+        </div>
+    </div>
+    {% include footer-workshop.html %}
+    <!-- Js -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!--<script src="http://maps.googleapis.com/maps/api/js?v=3"></script>-->
+    <script src='{{"js/template/timber.master.min.js" | relative_url }}'></script>
+    <script src="{{'js/waypoints/noframework.waypoints.min.js' | relative_url}}"></script>
+    <script src='{{"js/micro-invite.js" | relative_url }}' id="js-micro-invite-file"></script>
+    <script type="text/javascript">
+        JEKYLL_LIB.init({{page.sections | jsonify}});
+     </script>
+    
+    <!-- End Js -->
+    <!--style-->
+    <style>
+    .micro-invite-block .left-content .section-layer .description {
+        height: 100%;
+    }
+    .js-enroll-btn {
+    position: absolute;
+    bottom: 0%;
+    }
+/*desktop*/
+@media screen and (min-width: 769px) {
+    .micro-invite-block .left-content{
+        width: 100%;
+    }
+    .slider {
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+
+    }
+
+    .slides {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(100%);
+    scroll-snap-type: mandatory;
+    }
+    .slides > div {
+    flex-shrink: 0;  
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    }
+
+    /* Don't need button navigation */
+    @supports (scroll-snap-type) {
+        .slider > a {
+            display: none;
+        }
+    }
+    .phone{
+        display: none;
+    }
+    /*.desktop.js-enroll-btn {
+    position: absolute;
+    bottom: 0%;
+    }*/
+
+    .section-layer-animate:first-child .desktop.js-enroll-btn {
+    transform: translateY(-20vh);
+    transition-delay: 1s;
+    }
+
+    /*.micro-invite-block .left-content .section-layer .description {
+        height: 100%;
+    }*/
+}
+/*desktop end*/
+
+/*phone*/
+@media screen and (max-width: 768px) {
+    /*header*/
+    .mobile .header, .mobile .header .header-inner {
+        height: 6rem!important;
+    }
+    .header .logo img {
+        height: 50px !important;
+    }
+    .header .logo, .header .header-inner .navigation > ul > li, .header .header-inner .navigation > ul > li > a:not(.button), .header .header-inner .dropdown > .nav-icon {
+    line-height: 6rem;
+    }
+    /*footer*/
+    .micro-invite-block{
+        height: calc(100vh - 60px - 50px) !important;
+    }
+    /*end section*/
+    /*section*/
+    .js-description-paragraph{
+        display: none;
+    }
+    .js-description-title{
+        font-size: 2rem;
+        padding-bottom: 40px !important;
+
+    }
+    /*.button, button {
+        margin: 0;
+    }*/
+    
+    .micro-invite-block .left-content{
+        height: 100%;
+    }
+    .micro-invite-block .right-content {
+        -webkit-overflow-scrolling: touch; 
+        scroll-behavior: smooth;
+    }
+    .desktop{
+        display: none;
+    }
+    /*slider form*/
+    .slider {
+        height: 30%;
+        width: 100%
+    }
+    .slider-phone {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    }
+
+    .slides-phone {
+    background-size: cover;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(100%);
+    scroll-snap-type: mandatory;
+    }
+    .slides-phone > div {
+    flex-shrink: 0;  
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    }
+    @supports (scroll-snap-type) {
+        .slider-phone > a {
+            display: none;
+        }
+    } 
+    /*slider form end*/  
+}
+/*kleien mobiele*/
+@media screen and (max-width: 400px) {
+    .js-description-title{
+        font-size: 90%;
+    }
+    .kleine-phone{
+        font-size: 2.4rem;
+    }
+}
+    </style>
+    <!--end-style-->
+</body>
+</html>

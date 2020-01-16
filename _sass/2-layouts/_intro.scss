@@ -1,0 +1,22 @@
+/*=================================================================== 
+	INTRO
+===================================================================*/
+
+.intro-title-2{
+    @extend %u-position-relative;
+    background-color: rgb(31,0,50);
+    &::before{
+        content: "";
+        @extend %u-position-absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*background: $common-intro-bg;*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        @include opacity(0.5);
+    }
+}
